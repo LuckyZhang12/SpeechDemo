@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+ >
+
+    <TextView android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <Button android:id="@+id/btn_init"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="初始化打印机"
+            android:layout_below="@id/status"
+        />
+
+    <EditText android:id="@+id/et_ip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入打印机的ip"
+        android:layout_toLeftOf="@id/btn_init"
+              android:layout_below="@id/status"
+              android:text="192.168.2.111"
+        />
+
+    <Button android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="打印"
+            android:layout_below="@id/btn_init"
+        />
+
+    <EditText android:id="@+id/et_content"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="안녕하세요"
+              android:hint="输入要打印的内容"
+              android:layout_toLeftOf="@id/btn_send"
+              android:layout_below="@id/et_ip"
+        />
+    
+    <Button android:id="@+id/btn_start_speak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始说话"
+            android:layout_below="@id/et_content"
+        />
+
+    <CheckBox android:id="@+id/cb_only_speech"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_start_speak"
+        android:layout_alignParentLeft="true"
+        android:text="只测试语音"/>
+
+    <TextView android:id="@+id/tv_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cb_only_speech"
+        android:layout_margin="10dp"/>
+
+    <ImageView android:id="@+id/iv_image"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
