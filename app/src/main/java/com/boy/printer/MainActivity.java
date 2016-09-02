@@ -63,7 +63,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
     private Transaction recoTransaction;
     private State state = State.IDLE;
 
-    private String language = "kor-KOR";// 默认是别韩语
+    private String language = "eng-USA";//"kor-KOR";// 默认是别韩语
 
     private boolean isCancled;
     // 语音识别 end
@@ -196,7 +196,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
 	private void initPrinter(){
 		try{
-			mPrinter = new BitmapPrinter(mIp,mPort);
+			mPrinter = new EscPosWebPrinter(mIp,mPort);
 			mUIHandler.sendEmptyMessage(PRINTER_INIT_FINISH);
 		}catch (Exception e){
 			e.printStackTrace();
@@ -271,8 +271,8 @@ public class MainActivity extends Activity implements View.OnClickListener{
 				quitLooper();
 				break;
 			case SEND_MESSAGE:
-//				printMsg(mMsg);
-                printBitmap();
+				printMsg(mMsg);
+//                printBitmap();
 				break;
 		
 		}
