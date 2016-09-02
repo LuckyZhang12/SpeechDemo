@@ -86,7 +86,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 					break ;
 				case SEND_MESSAGE_FINISH:
 					mStatus.setText("打印成功");
-                    mImageView.setImageBitmap(getTextBitmap());
+//                    mImageView.setImageBitmap(getTextBitmap());
 					break ;
 				case PRINTER_INIT_ERROR:
 					Toast.makeText(MainActivity.this,"初始化打印机错误，退出重新进入",Toast.LENGTH_LONG).show();
