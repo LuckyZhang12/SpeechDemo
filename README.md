@@ -1,3 +1,9 @@
+# 目的
+
+使用nuance引擎通过语音识别出文字，然后通过打印机将识别出的文字打印出来
+
+以下为nuance如何使用的说明
+
 # SpeechKit 2 Sample App
 
 This is intended to be a demonstration of some of the most common tasks you will perform with SpeechKit 2.
